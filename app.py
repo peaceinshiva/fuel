@@ -49,12 +49,15 @@ def uploadfile():
             return "Kindly upload Excel Format File"
         
         df=df.fillna(0)
-        print(df)
+        print(df.head())
         df['Membrane']=membrane.transform(df['Membrane'])
         df['O2 Condition']=o2.transform(df['O2 Condition'])
         df['H2 Condition']=h2.transform(df['H2 Condition'])
-
-        
+        names=['Thickness (micron)', 'Temperature (C Deg)', 'Current (A cm-2)','Content of composite (wt%)',
+       'Relative Humidity (%)', 'Flow Rate (H2) (cm3/min)',
+       'Flow Rate (O2) (cm3/min)', 'O2 Condition', 'H2 Condition', 'Membrane']
+        df=df[names]
+        print(df.head())
         pred=reg.predict(df)
         df['OCV (V)']=pred
         df['Power W/cm2']=df['OCV (V)']*df['Current (A cm-2)']
