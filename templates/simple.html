@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataFrame Result</title>
+</head>
+<body text="Black" bgcolor="lightyellow">
+<h4 style="text-align:center">
+Predictions of OCV (V) of PEMFC Are:- <br><br><br>
+</h4>
+
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+
+<h4 style="text-align:center">
+<br> <br> <br> Thank You For Using The OCV of PEMFC Prediction Portal 
+</h4>
+</body>
+</html>

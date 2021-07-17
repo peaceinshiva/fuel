@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<title>Price Prediction Portal</title>
+
+<style>
+   h2 {text-align: center;}
+   table, th, td {
+   border: 1px solid black; }
+</style>
+
+<h2>PEMFC OCV PREDICTION PORTAL</h2>
+
+<form action = '/fildetails' method='POST' 
+enctype = 'multipart/form-data'>
+<body text="Black" bgcolor="lightyellow">
+
+<h4 style="text-align:center">Fill The Below Details For PEMFC OCV Prediction</h4>
+
+<table style="white-space:nowrap; width:50%;" align="center">
+<tr>
+<th>
+<p>
+<label for="name">Composite Membrane :</label>
+<select name="name" id="name"> 
+  <option></option>
+  <option value='Nafion'>Nafion </option> 
+  <option value="GO-Nafion">GO-Nafion</option>
+  <option value='Pt-G-Nafion'>Pt-G-Nafion</option>
+  <option value="Recast Nafion">Recast Nafion</option>   
+  <option value="Nafion 212">Nafion 212</option></select>
+</p>
+
+<p>
+<label> Thickness (micron) : </label>
+<input type ='number' placeholder='Thickness' name='thickness' step=".001"></p>
+
+<p><label> Temperature (C Deg) : </label>
+<input type ="number" placeholder='Temperature' name='temp' step=".001"></p>
+
+<p>
+<label> Current Density (A/cm2) : </label>
+<input type ="number" placeholder='Current' name='current' step=".001"></p>
+
+<p>
+<label> Content of composite (wt%): </label>
+<input type ="number" placeholder='Composite Content' name='content' step=".001"></p>
+
+<p>
+<label> Relative Humidity (%): </label>
+<input type ="number" placeholder='Relative Humidity' name='humidity' step=".001"></p>
+
+<p>
+<label> Flow Rate (H2) (cm3/min) : </label>
+<input type ="number" placeholder='Flow Rate (H2)' name='flow-rate1' step=".001"></p>
+
+<p>
+<label> Flow Rate (O2) (cm3/min) :  </label>
+<input type ="number" placeholder='Flow Rate (O2)' name='flow-rate2' step=".001"></p>
+
+<p>
+<label for="name"> O2 Condition :</label>
+<select name="o2 condition" id="condition"> 
+  <option></option>
+  <option value='Dry'> Dry </option> 
+  <option value="Humidified">Humidified</option></select></p>
+
+<p>
+<label for="name"> H2 Condition :</label>
+<select name="h2 condition" id="condition"> 
+  <option></option>
+  <option value='Dry'> Dry </option> 
+  <option value="Humidified"> Humidified </option></select></p>
+
+
+<h>
+<button type="submit" value="submit">Submit</button>
+<input type="reset" value='Reset'>
+
+</h>
+
+</th>
+</tr>
+</table>
+
+</form>
+</body>
+</html>
