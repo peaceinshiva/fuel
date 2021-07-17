@@ -48,7 +48,8 @@ def uploadfile():
         else:
             return "Kindly upload Excel Format File"
         
-        df.fillna(0,inplace=True)
+        df=df.fillna(0)
+        print(df)
         df['Membrane']=membrane.transform(df['Membrane'])
         df['O2 Condition']=o2.transform(df['O2 Condition'])
         df['H2 Condition']=h2.transform(df['H2 Condition'])
